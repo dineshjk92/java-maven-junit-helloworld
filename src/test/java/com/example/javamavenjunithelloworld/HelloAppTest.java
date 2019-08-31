@@ -9,6 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 
@@ -74,7 +75,9 @@ public class HelloAppTest {
         // Passing no arguments should work.
         String[] args = {};
         HelloApp.main(args);
+        assertTrue(false);
     }
+
 
     @Test
     public void classInstanceForCodeCoverageTest() {
@@ -84,4 +87,5 @@ public class HelloAppTest {
         // 95% code coverage.
         new HelloApp();
     }
+    
 }
