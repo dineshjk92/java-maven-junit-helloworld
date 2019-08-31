@@ -10,6 +10,7 @@ import java.io.PrintStream;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Integration test for the HelloApp program.
@@ -37,8 +38,8 @@ public class HelloWithTestsIT {
     public void doesItSayHelloTest() {
         String[] args = {"1"};
         HelloApp.main(args);
-
         assertThat(out.toString(), is(String.format("%s%s", Hello.HELLO, System.lineSeparator())));
+        assertTrue(false);
     }
 
     @Test
